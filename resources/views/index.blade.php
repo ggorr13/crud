@@ -4,7 +4,7 @@
 
 @section('content')
     <a class="btn btn-primary" role="button" href="{{route('users.create')}}">Create user</a>
-    <table class="table">
+    <table class="table table-dark table-sm mt-3">
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -18,10 +18,10 @@
             <tr>
                 <th scope="row" >{{$user->id}}</th>
                 <td>
-                    <a href="{{route('users.show',$user)}}" class="text-decoration-none link-primary">{{$user->name}}</a>
+                    <a href="{{route('users.show',$user)}}" class="text-decoration-none link-light">{{$user->name}}</a>
                 </td>
                 <td>
-                    <a href="{{route('users.show',$user)}}" class="text-decoration-none link-primary">{{$user->email}}</a>
+                    <a href="{{route('users.show',$user)}}" class="text-decoration-none link-light">{{$user->email}}</a>
                 </td>
                 <td>
                     <form method="post" action="{{route('users.destroy',$user)}}">
@@ -35,4 +35,5 @@
         @endforeach
         </tbody>
     </table>
+    <div class="bg-dark"> {{$users->links()}}</div>
 @endsection

@@ -26,14 +26,13 @@
         }
     </style>
 
-
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/5.0/examples/checkout/form-validation.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body class="bg-dark">
 
 <div class="container">
-    <h1>@yield('title')</h1>
+    <h1 class="text-light mt-3">@yield('title')</h1>
     <main>
         @yield('content')
     </main>
