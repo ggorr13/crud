@@ -49,9 +49,9 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function show($id)
+    public function show(User $user)
     {
-        return view('show');
+        return view('show',compact('user'));
     }
 
     /**
