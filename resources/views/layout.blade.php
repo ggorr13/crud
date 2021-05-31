@@ -34,6 +34,9 @@
 <div class="container">
     <h1 class="text-light mt-3">@yield('title')</h1>
     <main>
+        @if(session('success'))
+            <div class="alert alert-success">{{session('success')}}</div>
+        @endif
         @yield('content')
     </main>
 </div>
