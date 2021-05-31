@@ -16,12 +16,12 @@
         <tbody>
         @foreach($users as $user)
             <tr>
-                <th scope="row">{{$user->id}}</th>
+                <th scope="row" >{{$user->id}}</th>
                 <td>
-                    <a href="{{route('users.show',$user)}}" class="nav-link">{{$user->name}}</a>
+                    <a href="{{route('users.show',$user)}}" class="text-decoration-none link-primary">{{$user->name}}</a>
                 </td>
                 <td>
-                    <a href="{{route('users.show',$user)}}" class="nav-link">{{$user->email}}</a>
+                    <a href="{{route('users.show',$user)}}" class="text-decoration-none link-primary">{{$user->email}}</a>
                 </td>
                 <td>
                     <form method="post" action="{{route('users.destroy',$user)}}">
