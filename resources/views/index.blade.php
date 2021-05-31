@@ -18,13 +18,18 @@
             <tr>
                 <th scope="row">{{$user->id}}</th>
                 <td>
-                    <a href="{{route('users.show',$user)}}">{{$user->name}}</a>
+                    <a href="{{route('users.show',$user)}}" class="nav-link">{{$user->name}}</a>
                 </td>
                 <td>
-                    <a href="{{route('users.show',$user)}}">{{$user->email}}</a>
+                    <a href="{{route('users.show',$user)}}" class="nav-link">{{$user->email}}</a>
                 </td>
                 <td>
-                    <a type="button" href="{{route('users.edit',$user)}}" class="btn btn-warning">Edit</a>
+                    <form method="post" action="{{route('users.destroy',$user)}}">
+                        @csrf
+                        @method('Delete')
+                        <a type="button" href="{{route('users.edit',$user)}}" class="btn btn-warning">Edit</a>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
                 </td>
             </tr>
         @endforeach
