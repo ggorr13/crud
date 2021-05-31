@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -39,7 +38,6 @@
         @yield('content')
     </main>
 </div>
-
 
 <script src="https://getbootstrap.com/docs/5.0/examples/checkout/form-validation.css"></script>
 </body>
