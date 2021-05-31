@@ -8,7 +8,7 @@ To install composer
 
 cd /var/www/
 
-git clone ... folder
+git clone https://github.com/ggorr97/crud.git
 
 cd folder
 
